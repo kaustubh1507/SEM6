@@ -1,0 +1,30 @@
+public class Calculator {
+    public static Integer result=0;
+
+    public static void Addition(Integer x, Integer y)
+    {
+        result=x+y;
+        System.debug('Sum = '+result);
+    }
+    public static void Subtraction(Integer x, Integer y)
+    {
+        result=x-y;
+        System.debug('Difference = '+result);
+    }
+    public static void Multiplication(Integer x, Integer y)
+    {
+        result=x*y;
+        System.debug('Product = '+result);
+    }
+    public static void Division(Integer x, Integer y)
+    {
+        result=x/y;
+        System.debug('Quotient = '+result);
+    }
+}
+
+//IN THE ANONYMOUS WINDOW
+Calculator.Addition(20,10);
+Calculator.Subtraction(20,10);
+Calculator.Multiplication(20,10);
+Calculator.Division(20,10);
