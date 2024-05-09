@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+</head>
+<body>
+    <h1>Bookstore</h1>
+
+    <h2>Add Book</h2>
+    <form action="add_book.php" method="post">
+        <label>Title:</label>
+        <input type="text" name="title" required><br>
+        <label>Author:</label>
+        <input type="text" name="author" required><br>
+        <label>Genre:</label>
+        <input type="text" name="genre"><br>
+        <label>Publication Year:</label>
+        <input type="number" name="publication_year"><br>
+        <button type="submit">Add Book</button>
+    </form>
+
+    <h2>Books</h2>
+    <ul>
+        <?php
+        include 'functions.php';
+        $books = getBooks();
+        foreach ($books as $book) {
+            echo "<li>{$book['title']} by {$book['author']} ({$book['publication_year']}) - {$book['genre']}</li>";
+        }
+        ?>
+    </ul>
+</body>
+</html>
